@@ -1,2 +1,2 @@
 # css-frameworks-ca
-A template repository used for student CSS Frameworks CA submissions.
+Replace this text with a description of your social media project.
