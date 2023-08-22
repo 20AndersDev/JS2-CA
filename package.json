@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A starting point for the CSS Frameworks CA project",
   "scripts": {
-    "build-sass": "sass src/scss/styles.scss src/scss/dist/styles.css",
+    "build-sass": "sass src/scss src/scss/dist/styles.css",
     "watch": "sass --watch src/scss/styles.scss:src/scss/dist/styles.css --no-source-map & live-server"
 
 
