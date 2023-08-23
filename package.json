@@ -5,9 +5,6 @@
   "scripts": {
     "build-sass": "sass src/scss src/scss/dist/styles.css",
     "watch": "sass --watch src/scss/styles.scss:src/scss/dist/styles.css --no-source-map & live-server"
-
-
-
   },
   "repository": {
     "type": "git",
