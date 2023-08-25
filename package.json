@@ -4,7 +4,9 @@
   "description": "A starting point for the CSS Frameworks CA project",
   "scripts": {
     "build-sass": "sass src/scss src/scss/dist/styles.css",
-    "watch": "sass --watch src/scss/styles.scss:src/scss/dist/styles.css --no-source-map & live-server"
+    "watch": "sass --watch src/scss/styles.scss:src/scss/dist/styles.css --no-source-map & live-server",
+    "start": "live-server",
+        "dev": "npm-run-all --parallel watch start"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,7 @@
   },
   "devDependencies": {
     "live-server": "^1.1.0",
+    "npm-run-all": "^4.1.5",
     "sass": "^1.66.1"
   },
   "main": "index.js"
