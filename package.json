@@ -4,7 +4,7 @@
   "description": "A starting point for the CSS Frameworks CA project",
   "scripts": {
     "build-sass": "sass src/scss:dist/css",
-    "watch": "sass --watch src/scss/styles.scss:src/scss/dist/styles.css --no-source-map & live-server",
+    "watch": "sass --watch src/scss/styles.scss:dist/css/styles.css --no-source-map & live-server",
     "start": "live-server",
         "dev": "npm-run-all --parallel watch start"
   },

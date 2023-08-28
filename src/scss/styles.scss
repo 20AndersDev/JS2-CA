@@ -1,5 +1,21 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+$form_error_color: #dc3545;
+
+input {
+  border: 10px solid;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin: 0.25rem;
+  min-width: 125px;
+  padding: 0.5rem;
+  transition: border-color 0.5s ease-out;
+}
+
+input:invalid {
+  border-color: $form_error_color;
+}
+
 .container {
   position: absolute;
   top: 50%;
@@ -11,5 +27,9 @@
     font-weight: bold;
     margin-bottom: 20px;
   }
+
+
+  
+ 
 }
 
