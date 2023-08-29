@@ -1,20 +1,11 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "variables";
 
-$form_error_color: #dc3545;
+$like_button_color: #dc3545;
 
-input {
-  border: 10px solid;
-  border-radius: 4px;
-  font-size: 1rem;
-  margin: 0.25rem;
-  min-width: 125px;
-  padding: 0.5rem;
-  transition: border-color 0.5s ease-out;
-}
 
-input:invalid {
-  border-color: $form_error_color;
-}
+
+// Login page
 
 .container {
   position: absolute;
@@ -27,9 +18,25 @@ input:invalid {
     font-weight: bold;
     margin-bottom: 20px;
   }
-
-
   
+
+  input {
+    border: 3px solid;
+    border-radius: 4px;
+    transition: border-color 0.5s ease-out;
+  }
+  
+  input:invalid {
+    border-color: $form_error_color;
+  }
  
 }
 
+
+
+// Feed Page
+  .navbar {
+    display: flex;
+    justify-content: center;
+  }
+// profile page
