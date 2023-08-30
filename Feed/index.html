@@ -8,23 +8,22 @@
     <title>ChatApp - Feed</title>
 </head>
 <body>
-    <header>   
-        <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand">ChatApp</a>
-            <form class="form-inline col-md-4 d-flex justify-content-center">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Search</button>
-            </form>
-        </nav>
+    <header>
+            <nav class="navbar navbar-dark bg-dark justify-content-center">
+                <a class="navbar-brand">ChatApp</a>
+                <form class="form-inline col-md-3 d-flex justify-content-center">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </nav>
     </header>
     <main>
-        <div class="container mt-5">
+        <div class="container-12 d-flex justify-content-center mt-5">
             <div class="row">
-                <div class="col-md-8 offset-md-2">
+                <div class="col">
                     <!-- Create Post Section -->
-                    <div class="card mb-4">
+                    <div class="card mb-4 d-flex justify-content-center">
                         <div class="card-header">
-                            <h5>Whats on your mind today?</h5>
+                            <h5>What's on your mind today?</h5>
                         </div>
                         <div class="card-body">
                             <textarea class="form-control" rows="3" placeholder="Write your post..."></textarea>
@@ -33,8 +32,15 @@
                             <button class="btn btn-primary">Create Post</button>
                         </div>
                     </div>
-        
-                    <!-- Existing Posts -->
+                    <div class="input-group mb-3 ">
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option selected>Sort by</option>
+                            <option value="1">Date</option>
+                            <option value="2">A-Z</option>
+                            <option value="3">Newest posts</option>
+                        </select>
+                    </div>
+                    <!-- Posts -->
                     <div class="card mb-4">
                         <div class="card-header">
                             <h5>User Name</h5>
@@ -43,35 +49,17 @@
                             <p>This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
                         <div class="card-footer d-flex justify-content-evenly">
-                            <div>
-                                <i class="fas fa-regular fa-heart justify-content-center d-flex fa-2x color-red like"></i>
-                            </div> 
-                            <div>
-                                <i class="far fa-comment ustify-content-center d-flex fa-2x"></i> 
-                            </div>     
+                            <i class="far fa-heart fa-2x "></i>
+                            <i class="far fa-comment fa-2x"></i>
                         </div>
                     </div>
-        
-                    <!-- Add more posts as needed -->
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <h5>User Name</h5>
-                        </div>
-                        <div class="card-body">
-                            <p>This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <div class="card-footer d-flex justify-content-evenly">
-                            <div>
-                                <i class="fas fa-regular fa-heart justify-content-center d-flex fa-2x color-red like"></i>
-                            </div> 
-                            <div>
-                                <i class="far fa-comment ustify-content-center d-flex fa-2x"></i> 
-                            </div>    
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
     </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

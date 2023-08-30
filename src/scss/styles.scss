@@ -1,42 +1,51 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "variables";
 
-$like_button_color: #dc3545;
-
 
 
 // Login page
 
-.container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+#login-container {
+  margin-top: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   .promt {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     margin-bottom: 20px;
+    text-align: center;
   }
-  
 
-  input {
-    border: 3px solid;
-    border-radius: 4px;
-    transition: border-color 0.5s ease-out;
-  }
-  
-  input:invalid {
-    border-color: $form_error_color;
-  }
- 
-}
-
-
-
-// Feed Page
-  .navbar {
+  #login-form{
     display: flex;
     justify-content: center;
+
+
+    input {
+      border: 3px solid;
+      border-radius: 4px;
+      transition: border-color 0.5s ease-out;
+  
+      &:invalid {
+        border-color: $form_error_color; // Make sure to define $form_error_color
+      }
+    }
   }
-// profile page
+  }
+
+  
+
+  .navbar {
+    justify-content: center;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
