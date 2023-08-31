@@ -38,14 +38,98 @@
 
   
 
-  .navbar {
-    justify-content: center;
-}
+  //profile page
 
-.main-container {
+  .container-profile {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-}
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+    .div-profile {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+        .div-profile-img {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            max-width: 300px;
+        } 
+
+        .div-bio {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 300px;
+        } 
+      } 
+    } 
+
+    .container-profile-tabs{
+      width: 100%;
+
+      .div-profile-tabs{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+
+      }
+
+    .profile-tabs{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+        .post-card {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          max-width: 500px;
+        }
+      
+          .user-card {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+
+            .follower-card{
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              .button-unfollow{
+                background-color: $unfollow_button_color;
+                color: white;
+              }
+            }
+
+            .followers-card{
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+            
+
+              .block-button{
+                background-color: $unfollow_button_color;
+                color: white;
+              }
+
+
+              
+            }
+        }
+
+      }
+    }
+      
+  
+
 
