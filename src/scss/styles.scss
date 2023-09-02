@@ -1,5 +1,6 @@
-@import "../../node_modules/bootstrap/scss/bootstrap";
 @import "variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
 
 
 
@@ -30,7 +31,7 @@
       transition: border-color 0.5s ease-out;
   
       &:invalid {
-        border-color: $form_error_color; // Make sure to define $form_error_color
+        border-color: $form_error_color; 
       }
     }
   }
@@ -53,6 +54,7 @@
         justify-content: center;
         flex-direction: row;
         width: 100%;
+        
         .div-profile-img {
             display: flex;
             justify-content: center;
