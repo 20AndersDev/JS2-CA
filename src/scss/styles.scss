@@ -2,43 +2,56 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 
+body{
+  background-color: #F0F2F5;
+}
 
+//nav bar styling
 
-// Login page
-
-#login-container {
-  margin-top: 10%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  .promt {
-    font-size: 18px;
+.nav-item {
+  a.nav-link {
+    color: #fff; // White text color for the navigation items
     font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-  }
+    border-radius: 5px;
+    &:hover {
+      background-color: $nav_link_color_hover; // Darker blue background on hover
+    }
 
-  #login-form{
-    display: flex;
-    justify-content: center;
-
-
-    input {
-      border: 3px solid;
-      border-radius: 4px;
-      transition: border-color 0.5s ease-out;
-  
-      &:invalid {
-        border-color: $form_error_color; 
+    // Style the "Sign Out" anchor separately
+    &.sign_out {
+      font-weight: bold;
+      border-radius: 5px;
+      &:hover {
+        background-color: $nav_signout_button; // Red background for "Sign Out" on hover
       }
     }
   }
-  }
+}
 
-  
+.card-header{
+  background-color: $card_styling_header;
+  color: white;
+}
 
+.card-body{
+  background-color: $card_styling_body;
+  color: black;
+}
+
+
+.card-footer{
+  background-color: $card_styling_footer;
+  color: white;
+}
+
+
+
+
+// Login page
+.brand{
+  margin-left: 10%;
+  font-size: 30px;
+}
   //profile page
 
   .container-profile {
