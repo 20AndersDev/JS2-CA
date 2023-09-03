@@ -1,7 +1,7 @@
 {
   "name": "css-frameworks-ca",
   "version": "0.0.1",
-  "description": "A starting point for the CSS Frameworks CA project",
+  "description": "CSS frameworks course assignment",
   "scripts": {
     "build-sass": "sass src/scss:dist/css",
     "watch": "sass --watch src/scss/styles.scss:dist/css/styles.css --no-source-map & live-server",
