@@ -14,25 +14,20 @@ To get this project up and running, follow these steps:
 
 1. Clone this repository to your local machine using:
 
-   ```shell
-   git clone https://github.com/your-username/your-project-name.git
+   ```
+   git clone [https://github.com/your-username/your-project-name.git](https://github.com/Noroff-Anders/css-frameworks-ca.git)
 
-Replace your-username and your-project-name with your GitHub username and the name of your project.
 
-    Navigate to the project directory:
-
-    shell
-
-cd your-project-name
 
 Install the necessary dependencies. Run the following commands:
-
+```
 npm install -D sass
 npm install bootstrap
 npm install -D live-server
-
+```
 These commands will install Sass, Bootstrap, and Live Server as development dependencies.
 
 After the installation is complete, you can start the development server by running:
-
+```
     npm run watch
+```
