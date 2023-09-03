@@ -1,0 +1,22 @@
+<div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+    <form class="needs-validation" action="/profile/index.html">
+      <div class="mb-3">
+        <label for="registerName" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="registerName" required placeholder="Enter your full name">
+        <div class="invalid-feedback">Please provide your full name.</div>
+      </div>
+      <div class="mb-3">
+        <label for="registerEmail" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="registerEmail" required placeholder="Enter a valid email">
+        <div class="invalid-feedback">Please provide a valid email address.</div>
+      </div>
+      <div class="mb-3">
+        <label for="registerPassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="registerPassword" required placeholder="Password (min 8 characters)" minlength="8">
+        <div class="invalid-feedback">Please choose a valid password.</div>
+      </div>
+      <div class="d-grid mt-3">
+        <button class="btn btn-primary" type="submit">Register</button>
+      </div>
+    </form>
+  </div>

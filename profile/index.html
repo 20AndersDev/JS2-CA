@@ -35,19 +35,16 @@
                         <button class="btn btn-success my-2 my-sm-0">Search</button>
                     </form>
                 </div>
-            </div>
-            
-            
-            
+            </div> 
           </nav>
     </header>
     <main>
-        <div class="container col-12 mt-md-5 container-profile">
-            <div class="row mb-sm-1 div-profile">
-                <div class="col-6 col-md-6 div-profile-img">
-                    <img class="img-thumbnail" src="/Assets/images/user.png">
+        <div class="container col-12 mt-md-5  d-flex justify-content-center">
+            <div class="row mb-sm-5 justify-content-center bg-white p-lg-4">
+                <div class=" col-md-4 div-profile-img">
+                    <img class="img-fluid " src="/Assets/images/user.png">
                 </div>
-                <div class="col-6 col-md-6 div-bio">
+                <div class=" col-5 div-bio d-flex flex-column align-items-center">
                     <h1>Jan Banan</h1>
                     <p>This is an example of a user bio.</p>
                     <button class="btn btn-primary">Follow</button>
@@ -56,7 +53,7 @@
         </div>
         
         <div class="container col-10 mb-5 container-profile-tabs">
-            <ul class="nav nav-tabs div-profile-tabs" id="myTab" role="tablist">
+              <ul class="nav nav-tabs div-profile-tabs justify-content-center" id="myTab" role="tablist">
                 <li class="nav-item">
                   <a class="nav-link active" id="home-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true">Posts</a>
                 </li>
@@ -67,119 +64,126 @@
                   <a class="nav-link" id="followers-tab" data-toggle="tab" href="#followers" role="tab" aria-controls="followers" aria-selected="false">Followers</a>
                 </li>
               </ul>
-              <div class="tab-content profile-tabs" id="myTabContent">
-                    <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="Posts-tab">
-                        <div class="card mt-4 post-card">
-                            <div class="card-header">
-                                <h5>Jan Banan</h5>
+              <div class="tab-content profile-tabs justify-content-center d-flex" id="myTabContent">
+                    <div class="tab-pane fade show active bg-white" id="posts" role="tabpanel" aria-labelledby="Posts-tab">
+                        <div class="container mt-5">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6 ">
+                                    <!-- Posts -->
+                                    <div class="card  mb-4">
+                                        <div class="card-header">
+                                            <h5>Jan Banan</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>This is an example post. Nothing special here Lorem ipsum dolor sit amet consectetur .</p>
+                                        </div>
+                                        <div class="card-footer d-flex justify-content-evenly">
+                                            <i class="far fa-heart fa-2x "></i>
+                                            <i class="far fa-comment fa-2x"></i>
+                                        </div>
+                                    </div>
+                
+                                    <div class="card mb-4">
+                                        <div class="card-header">
+                                            <h5>Jan Banan</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Another silly example post Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate repellat, excepturi quos ex nemo aspernatur dolore illum libero recusandae doloribus magnam minima voluptatem sed debitis reprehenderit voluptatibus quae, rerum adipisci?</p>
+                                        </div>
+                                        <div class="card-footer d-flex justify-content-evenly">
+                                            <i class="far fa-heart fa-2x "></i>
+                                            <i class="far fa-comment fa-2x"></i>
+                                        </div>
+                                    </div>
+                
+                                    <div class="card mb-4">
+                                        <div class="card-header">
+                                            <h5>Jan Banan</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
+                                        <div class="card-footer d-flex justify-content-evenly">
+                                            <i class="far fa-heart fa-2x "></i>
+                                            <i class="far fa-comment fa-2x"></i>
+                                        </div>
+                                    </div>
+                
+                                    <div class="card mb-4">
+                                        <div class="card-header">
+                                            <h5>Jan Banan</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
+                                        <div class="card-footer d-flex justify-content-evenly">
+                                            <i class="far fa-heart fa-2x "></i>
+                                            <i class="far fa-comment fa-2x"></i>
+                                        </div>
+                                    </div>
+                
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <p>This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="card-footer d-flex justify-content-evenly">
-                                <i class="far fa-heart fa-2x "></i>
-                                <i class="far fa-comment fa-2x"></i>
-                            </div>
-                        </div>
-                        <div class="card mt-4 post-card">
-                            <div class="card-header">
-                                <h5>Jan Banan</h5>
-                            </div>
-                            <div class="card-body">
-                                <p>This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="card-footer d-flex justify-content-evenly">
-                                <i class="far fa-heart fa-2x "></i>
-                                <i class="far fa-comment fa-2x"></i>
-                            </div>
-                        </div>
-
-                        <div class="card mt-4 post-card">
-                            <div class="card-header">
-                                <h5>Jan Banan</h5>
-                            </div>
-                            <div class="card-body">
-                                <p>This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="card-footer d-flex justify-content-evenly">
-                                <i class="far fa-heart fa-2x "></i>
-                                <i class="far fa-comment fa-2x"></i>
-                            </div>
-                        </div>
-                        <div class="card mt-4 post-card">
-                            <div class="card-header">
-                                <h5>Jan Banan</h5>
-                            </div>
-                            <div class="card-body">
-                                <p>This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="card-footer d-flex justify-content-evenly">
-                                <i class="far fa-heart fa-2x "></i>
-                                <i class="far fa-comment fa-2x"></i>
-                            </div>
-                        </div>
-
+                          </div>
                     </div>
-
-                    <div class="tab-pane fade col-8" id="following" role="tabpanel" aria-labelledby="Following-tab">
+                    <div class="tab-pane fade col-8 justify-content-center" id="following" role="tabpanel" aria-labelledby="Following-tab">
                         <div class="card user-card mt-4">
-                            <div class="card-body follower-card ">
+                            <div class="card-body follower-card d-flex justify-content-between align-items-center">
                                 <h5 class="username"> Jens Jensen</h5>
                                 <button class="btn button-unfollow">Unfollow</button>
                             </div>
                         </div>
                         <div class="card user-card mt-4">
-                            <div class="card-body follower-card ">
+                            <div class="card-body follower-card d-flex justify-content-between align-items-center ">
                                 <h5 class="username"> Ola nordmann</h5>
                                 <button class="btn button-unfollow">Unfollow</button>
                             </div>
                         </div>
                         <div class="card user-card mt-4">
-                            <div class="card-body follower-card ">
+                            <div class="card-body follower-card d-flex justify-content-between align-items-center ">
                                 <h5 class="username"> Bruce Wayne</h5>
                                 <button class="btn button-unfollow">Unfollow</button>
                             </div>
                         </div>
                         <div class="card user-card mt-4">
-                            <div class="card-body follower-card ">
+                            <div class="card-body follower-card d-flex justify-content-between align-items-center">
                                 <h5 class="username"> Clark kent</h5>
                                 <button class="btn button-unfollow">Unfollow</button>
                             </div>
                         </div>
                     </div>
 
-                    <div class="tab-pane fade col-8" id="followers" role="tabpanel" aria-labelledby="Followers-tab">
+                    <div class="tab-pane fade col-8 justify-content-center" id="followers" role="tabpanel" aria-labelledby="Followers-tab">
                         <div class="card user-card mt-4">
-                            <div class="card-body followers-card ">
+                            <div class="card-body followers-card d-flex justify-content-between align-items-center ">
                                 <h5 class="username"> Jens Jensen</h5>
                                 <button  class="btn block-button">Block</button>
                             </div>
                         </div>
                         <div class="card user-card mt-4">
-                            <div class="card-body followers-card ">
+                            <div class="card-body followers-card d-flex justify-content-between align-items-center ">
                                 <h5 class="username"> Ola nordmann</h5>
                                 <button  class="btn block-button">Block</button>
                             </div>
                         </div>
                         <div class="card user-card mt-4">
-                            <div class="card-body followers-card ">
+                            <div class="card-body followers-card d-flex justify-content-between align-items-center ">
                                 <h5 class="username"> Bruce Wayne</h5>
                                 <button  class="btn block-button">Block</button>
                             </div>
                         </div>
                         <div class="card user-card mt-4">
-                            <div class="card-body followers-card ">
+                            <div class="card-body followers-card d-flex justify-content-between align-items-center ">
                                 <h5 class="username"> Clark kent</h5>
                                 <button  class="btn block-button">Block</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     </main>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

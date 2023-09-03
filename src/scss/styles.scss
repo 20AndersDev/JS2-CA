@@ -1,32 +1,30 @@
 @import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-
-body{
-  background-color: #F0F2F5;
-}
-
 //nav bar styling
 
 .nav-item {
   a.nav-link {
-    color: #fff; // White text color for the navigation items
     font-weight: bold;
     border-radius: 5px;
     &:hover {
-      background-color: $nav_link_color_hover; // Darker blue background on hover
+      background-color: $nav_link_color_hover; 
+      color: #fff; 
     }
-
-    // Style the "Sign Out" anchor separately
     &.sign_out {
       font-weight: bold;
       border-radius: 5px;
       &:hover {
-        background-color: $nav_signout_button; // Red background for "Sign Out" on hover
-      }
+        background-color: $nav_signout_button; 
     }
   }
 }
+
+
+
+
+}
+
 
 .card-header{
   background-color: $card_styling_header;
@@ -45,106 +43,12 @@ body{
 }
 
 
-
-
-// Login page
-.brand{
-  margin-left: 10%;
-  font-size: 30px;
+.block-button,.button-unfollow{
+  background-color:$nav_link_color_hover ;
+  color: white;
+  border-radius: 5px;
+  &:hover {
+    background-color:$block_button_color ; 
+    color: #fff; 
+  }
 }
-  //profile page
-
-  .container-profile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10%;
-    margin-bottom: 10%;
-
-    .div-profile {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        width: 100%;
-        
-        .div-profile-img {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            max-width: 300px;
-        } 
-
-        .div-bio {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            max-width: 300px;
-        } 
-      } 
-    } 
-
-    .container-profile-tabs{
-      width: 100%;
-
-      .div-profile-tabs{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        gap: 10px;
-
-      }
-
-    .profile-tabs{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-
-        .post-card {
-          display: flex;
-          justify-content: center;
-          width: 100%;
-          max-width: 500px;
-        }
-      
-          .user-card {
-          display: flex;
-          justify-content: center;
-          width: 100%;
-
-            .follower-card{
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-
-              .button-unfollow{
-                background-color: $unfollow_button_color;
-                color: white;
-              }
-            }
-
-            .followers-card{
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-
-            
-
-              .block-button{
-                background-color: $unfollow_button_color;
-                color: white;
-              }
-
-
-              
-            }
-        }
-
-      }
-    }
-      
-  
-
-
