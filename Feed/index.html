@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/css/styles.css">
+    <script src="https://kit.fontawesome.com/eed746e6fc.js" crossorigin="anonymous"></script>
+    <title>ChatApp - Feed</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary p-1">
+            <a class="navbar-brand text-white brand" href="/Feed/index.html"><img src="/Assets/images/logo_navbar-removebg-preview.png" ></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse m-3" id="navbarSupportedContent">
+                <div class=" col-10 d-flex flex-column flex-lg-row align-items-lg-center justify-content-center gap-lg-5">
+                    <!-- Navigation Links -->
+                    <ul class="navbar-nav mr-lg-auto mt-2 mt-lg-0 gap-2">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/profile/index.html">Profile <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Feed/index.html">Feed</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sign_out" href="../index.html">Sign out</a>
+                        </li>
+                    </ul>
+                
+                    <form class="form-inline my-2 my-lg-0 ml-lg-3 d-flex">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success my-2 my-sm-0">Search</button>
+                    </form>
+                </div>
+            </div>
+            
+            
+            
+          </nav>
+    </header>
+    <main>
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 ">
+                    <!-- Create Post Section -->
+                    <div class="card mb-4 d-flex justify-content-center">
+                        <div class="card-header">
+                            <h5>What's on your mind today?</h5>
+                        </div>
+                        <div class="card-body">
+                            <textarea class="form-control" rows="3" placeholder="Write your post..."></textarea>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-success">Create Post</button>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3 ">
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option selected>Sort by</option>
+                            <option value="1">Date</option>
+                            <option value="2">A-Z</option>
+                            <option value="3">Newest posts</option>
+                        </select>
+                    </div>
+                    <!-- Posts -->
+                    <div class="card  mb-4">
+                        <div class="card-header">
+                            <h5>Jan Banan</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>This is an example post. Nothing special here Lorem ipsum dolor sit amet consectetur .</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-evenly">
+                            <i class="far fa-heart fa-2x "></i>
+                            <i class="far fa-comment fa-2x"></i>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5>Bruce Wayne</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Another silly example post Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate repellat, excepturi quos ex nemo aspernatur dolore illum libero recusandae doloribus magnam minima voluptatem sed debitis reprehenderit voluptatibus quae, rerum adipisci?</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-evenly">
+                            <i class="far fa-heart fa-2x "></i>
+                            <i class="far fa-comment fa-2x"></i>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5>Clark kent</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-evenly">
+                            <i class="far fa-heart fa-2x "></i>
+                            <i class="far fa-comment fa-2x"></i>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5>Jens Jensen</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-evenly">
+                            <i class="far fa-heart fa-2x "></i>
+                            <i class="far fa-comment fa-2x"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

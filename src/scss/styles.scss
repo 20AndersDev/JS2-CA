@@ -1,0 +1,54 @@
+@import "variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+//nav bar styling
+
+.nav-item {
+  a.nav-link {
+    font-weight: bold;
+    border-radius: 5px;
+    &:hover {
+      background-color: $nav_link_color_hover; 
+      color: #fff; 
+    }
+    &.sign_out {
+      font-weight: bold;
+      border-radius: 5px;
+      &:hover {
+        background-color: $nav_signout_button; 
+    }
+  }
+}
+
+
+
+
+}
+
+
+.card-header{
+  background-color: $card_styling_header;
+  color: white;
+}
+
+.card-body{
+  background-color: $card_styling_body;
+  color: black;
+}
+
+
+.card-footer{
+  background-color: $card_styling_footer;
+  color: white;
+}
+
+
+.block-button,.button-unfollow{
+  background-color:$nav_link_color_hover ;
+  color: white;
+  border-radius: 5px;
+  &:hover {
+    background-color:$block_button_color ; 
+    color: #fff; 
+  }
+}
