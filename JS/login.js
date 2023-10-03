@@ -7,11 +7,13 @@ const loginForm = document.getElementById("loginForm");
 loginForm.addEventListener("submit", async (login) => {
     login.preventDefault();
   
-    const userName = document.getElementById("loginUsername").value; 
+    const userName = document.getElementById("loginUsername").value;
+    const email = document.getElementById("loginEmail").value; 
     const password = document.getElementById("loginPassword").value; 
   
     const userData = {
-      userName: userName,
+      username: userName,
+      email: email,
       password: password,
     };
   
@@ -27,7 +29,10 @@ async function loginUser(url, userData) {
       },
       body: JSON.stringify({
         ...userData, 
-        username: userData.userName, // Add the "username" field
+        name: userData.username,
+        email: userData.email,
+        password: userData.password,
+
       }),
     };
     const response = await fetch(url, loginPostData);
@@ -36,9 +41,12 @@ async function loginUser(url, userData) {
     console.log(json);
     const token = json.accessToken;
     console.log(token);
-  } catch (error) {
+  }  catch (error) {
     console.log(error);
   }
+
+  
+
 }
 
 
