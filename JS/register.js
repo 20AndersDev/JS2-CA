@@ -15,6 +15,19 @@ async function registerNewUser(url, userData) {
     console.log(response);
     const json = await response.json();
     console.log(json);
+
+    if (response.ok) {
+      // Registration was successful
+      document.getElementById("successMessage").innerText = "User successfully created";
+      document.getElementById("successMessage").style.display = "block";
+      
+      // Redirect the user to the login page (you may replace the URL with your actual login page URL)
+      window.location.href = "../index.html";
+    } else {
+      // Handle registration errors if necessary
+      console.error("Registration failed.");
+    }
+
   } catch (error) {
     console.error(error);
   }

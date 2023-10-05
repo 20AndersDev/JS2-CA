@@ -4,6 +4,8 @@ const loginUrl = API_URL_base + "/social/auth/login";
 
 const loginForm = document.getElementById("loginForm");
 
+ export const registerSuccess =  document.getElementById("successMessage");
+
 loginForm.addEventListener("submit", async (login) => {
     login.preventDefault();
   
