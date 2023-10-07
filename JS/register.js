@@ -44,13 +44,3 @@ registrationForm.addEventListener("submit", async (register) => {
   await registerNewUser(registerNewUserUrl, userData);
 });
 
-const urlParams = new URLSearchParams(window.location.search);
-const registrationSuccess = urlParams.get("registration");
-
-if (registrationSuccess === "success") {
-  // Display the success message
-  const successMessage = document.getElementById("successMessage");
-  if (successMessage) {
-    successMessage.style.display = "block";
-  }
-}
