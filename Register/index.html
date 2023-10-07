@@ -22,6 +22,12 @@
         <h1>Register a new account</h1>
       </div>
 
+      <div class="errorMessageContainer d-flex justify-content-center mt-5">
+        <h2 id="errorMessage" class="text-danger" style="display: none; "> </h2>
+      </div>
+
+      
+
       <div class="row justify-content-center mt-5">
         <div class="col-6 d-flex flex-column">
           <div class="tab-pane fade show active" id="register" role="tabpanel" aria-labelledby="register-tab">
@@ -32,7 +38,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="registerEmail" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="registerEmail" required placeholder="Enter your email"/>
+                  <input type="email" class="form-control" id="registerEmail" required placeholder="Enter your Noroff email"/>
                 </div>
                 <div class="mb-3">
                   <label for="registerPassword" class="form-label">Password</label>
