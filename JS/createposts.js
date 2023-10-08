@@ -38,13 +38,23 @@ export function createPosts(post) {
     const cardFooter = document.createElement("div");
     cardFooter.classList.add("card-footer", "d-flex", "justify-content-evenly");
 
+    const reactionsCount = document.createElement("h5");
+    reactionsCount.classList = "reactions-count";
+    reactionsCount.textContent = post._count.reactions;
+
+    const commentCount = document.createElement("h5");
+    commentCount.classList = "comment-count";
+    commentCount.textContent = post._count.comments;
+
     const likeIcon = document.createElement("i");
     likeIcon.classList.add("far", "fa-heart", "fa-2x");
 
     const commentIcon = document.createElement("i");
     commentIcon.classList.add("far", "fa-comment", "fa-2x");
 
+    cardFooter.appendChild(reactionsCount);
     cardFooter.appendChild(likeIcon);
+    cardFooter.appendChild(commentCount);
     cardFooter.appendChild(commentIcon);
 
     postCard.appendChild(cardHeader);

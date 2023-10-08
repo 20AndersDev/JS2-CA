@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/css/styles.css">
     <script src="https://kit.fontawesome.com/eed746e6fc.js" crossorigin="anonymous"></script>
-    <script src="/JS/posts.js" type="module" defer></script>
     <script src="/JS/search.js" type="module" defer></script>
+    <script src="/JS/posts.js" type="module" defer></script>
+    <script src="/JS/newpost.js" type="module" defer></script>
+    
     <title>ChatApp - Feed</title>
 </head>
 <body>
@@ -32,8 +34,7 @@
                     </ul>
                 
                     <form class="form-inline my-2 my-lg-0 ml-lg-3 d-flex">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
-                        <button class="btn btn-success my-2 my-sm-0">Search</button>
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search by username or title" aria-label="Search" id="search-input">
                     </form>
                 </div>
             </div>
@@ -48,16 +49,24 @@
                         <div class="card-header">
                             <h5>What's on your mind today, ?</h5>
                         </div>
-                        <div class="card-body">
-                            <textarea class="form-control" rows="3" placeholder="Write your post..."></textarea>
-                        </div>
-                        <div class="card-footer">
-                            <button class="btn btn-success">Create Post</button>
-                        </div>
+                        <form id="newPostForm">
+                            <div class="card-body">
+                                <textarea class="form-control" id="post-form-title" rows="1" placeholder="Title"></textarea>
+                                <textarea class="form-control" id="post-form-body" rows="3" placeholder="Write your post..."></textarea>
+                                <textarea class="form-control" id="post-form-media" rows="1" placeholder="Media (add URL)"></textarea>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-success" id="submit-post">Create Post</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="d-flex justify-content-center mt-5">
+            <h2 id="post-success" class="text-success" style="display: none; "> Successfully created post</h2>
+        </div>
+        
         <div class="dropdown">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Filter
