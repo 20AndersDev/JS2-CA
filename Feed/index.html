@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/css/styles.css">
     <script src="https://kit.fontawesome.com/eed746e6fc.js" crossorigin="anonymous"></script>
-    <script src="/JS/posts.js" defer></script>
+    <script src="/JS/posts.js" type="module" defer></script>
+    <script src="/JS/search.js" type="module" defer></script>
     <title>ChatApp - Feed</title>
 </head>
 <body>
@@ -18,7 +19,6 @@
           
             <div class="collapse navbar-collapse m-3" id="navbarSupportedContent">
                 <div class=" col-10 d-flex flex-column flex-lg-row align-items-lg-center justify-content-center gap-lg-5">
-                    <!-- Navigation Links -->
                     <ul class="navbar-nav mr-lg-auto mt-2 mt-lg-0 gap-2">
                         <li class="nav-item active">
                             <a class="nav-link" href="/profile/index.html">Profile <span class="sr-only">(current)</span></a>
@@ -32,14 +32,11 @@
                     </ul>
                 
                     <form class="form-inline my-2 my-lg-0 ml-lg-3 d-flex">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
                         <button class="btn btn-success my-2 my-sm-0">Search</button>
                     </form>
                 </div>
             </div>
-            
-            
-            
           </nav>
     </header>
     <main>
@@ -49,7 +46,7 @@
                     <!-- Create Post Section -->
                     <div class="card mb-4 d-flex justify-content-center">
                         <div class="card-header">
-                            <h5>What's on your mind today?</h5>
+                            <h5>What's on your mind today, ?</h5>
                         </div>
                         <div class="card-body">
                             <textarea class="form-control" rows="3" placeholder="Write your post..."></textarea>
@@ -61,6 +58,18 @@
                 </div>
             </div>
         </div>
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Filter
+            </a>
+          
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" id="filter-default" href="#">None</a>
+              <a class="dropdown-item" id="filter-likes" href="#">Likes</a>
+              <a class="dropdown-item" id="filter-comments" href="#">Comments</a>
+            </div>
+          </div>
+
         <div class="container mt-5">
             <div class="row justify-content-center">
                 
