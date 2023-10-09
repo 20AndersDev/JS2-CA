@@ -15,18 +15,17 @@ async function createNewPost(url, postData) {
         const response = await fetch(url, newPostData);
         const json = await response.json();
         console.log(json);
-        return json; // Return the response JSON
+        return json; 
     } catch (error) {
         console.log(error);
     }
 }
 
 newPostForm.addEventListener("submit", async (event) => {
-    event.preventDefault(); // Prevent the form from submitting
+    event.preventDefault(); 
 
     const newPostTitle = document.getElementById("post-form-title").value;
 
-    // Optional properties with default values
     const newPostBody = document.getElementById("post-form-body").value || "";
     const newPostMedia = document.getElementById("post-form-media").value || "";
 
@@ -39,9 +38,7 @@ newPostForm.addEventListener("submit", async (event) => {
     const response = await createNewPost(newPostUrl, postData);
     
     if (response && response.id) {
-        // If a post ID is present in the response, the post was created successfully
         formSuccess();
-        // Reload the page to display the new post
         window.location.reload();
     }
 });

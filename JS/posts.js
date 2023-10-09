@@ -3,6 +3,7 @@ const postUrl =  API_URL_base + "/social/posts?_author=true";
 
 import { createPosts } from "./createposts.js";
 
+
 const postContainer = document.getElementById("postContainer");
 
 const queryParams = new URLSearchParams(window.location.search);
@@ -38,11 +39,13 @@ async function getPosts() {
             filteredPosts.sort((a, b) => b._count.comments - a._count.comments);
         }
 
-        // Iterate through the filtered and sorted posts and create HTML elements for each one
         filteredPosts.forEach((post) => {
             const postCard = createPosts(post);
             postContainer.appendChild(postCard);
         });
+
+
+
     } catch (error) {
         console.log(error);
     }
