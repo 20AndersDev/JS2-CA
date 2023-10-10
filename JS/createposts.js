@@ -1,3 +1,5 @@
+import { createEditButton } from "./editpost.js";
+
 export function createPosts(post) {
     const postCard = document.createElement("div");
     postCard.classList.add("card", "mb-4", "d-flex", "justify-content-center");
@@ -68,27 +70,8 @@ export function createPosts(post) {
     return postCard;
 }
 
-function createEditButton(post) {
-    const editButton = document.createElement("button");
-    editButton.classList.add("btn", "btn-outline-primary");
 
-    // Create an <i> element for the edit icon
-    const editIcon = document.createElement("i");
-    editIcon.classList.add("fa-solid", "fa-pencil");
 
-    // Add an event listener to handle the edit action
-    editButton.addEventListener("click", () => {
-        // Implement the edit functionality as needed
-        console.log(`Edit post with ID ${post.id}`);
-    });
 
-    // Check if the logged-in user's name matches the post author's name
-    if (localStorage.getItem("name") !== post.author.name) {
-        editButton.style.display = "none"; // Hide the button for posts where the names don't match
-    }
 
-    // Append the <i> element to the button
-    editButton.appendChild(editIcon);
 
-    return editButton;
-}
