@@ -1,9 +1,11 @@
+import { createPosts } from "./createposts.js";
+
 const userData = "https://api.noroff.dev/api/v1/social/posts?_author=true"
 
 const searchInput = document.getElementById('search-input');
 const postContainer = document.getElementById('postContainer');
 
-import { createPosts } from "./createposts.js";
+
 
 let posts = [];
 
@@ -16,6 +18,15 @@ searchInput.addEventListener("input", (e) => {
     });
     displayFilteredPosts(filteredPosts);
 });
+
+function displayFilteredPosts(filteredPosts) {
+    postContainer.innerHTML = "";
+    filteredPosts.forEach(post => {
+        const postCard = createPosts(post); 
+        postContainer.appendChild(postCard);
+    });
+}
+
 
 async function getPostsData() {
     try {
@@ -34,13 +45,5 @@ async function getPostsData() {
     }
 }
 
-function displayFilteredPosts(filteredPosts) {
-    postContainer.innerHTML = "";
-    filteredPosts.forEach(post => {
-        const postCard = createPosts(post); // Create post card using your createPost function
-        postContainer.appendChild(postCard);
-    });
-}
 
-// Call the function to initially fetch and display all posts
 getPostsData();

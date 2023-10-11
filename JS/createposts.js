@@ -1,4 +1,5 @@
 import { createEditButton } from "./editpost.js";
+import { createDeleteButton } from "./deleteposts.js";
 
 export function createPosts(post) {
     const postCard = document.createElement("div");
@@ -15,7 +16,15 @@ export function createPosts(post) {
     dateCreated.id = "date-created";
     dateCreated.textContent = new Date(post.created).toLocaleString();
 
+    const editButton = createEditButton(post);
+    
+
+    const deleteButton = createDeleteButton(post);
+    
+
     cardHeader.appendChild(authorName);
+    cardHeader.appendChild(editButton);
+    cardHeader.appendChild(deleteButton);
     cardHeader.appendChild(dateCreated);
 
     const postCardBody = document.createElement("div");
@@ -60,8 +69,7 @@ export function createPosts(post) {
     cardFooter.appendChild(commentIcon);
 
     // Create an edit button for all posts
-    const editButton = createEditButton(post);
-    cardHeader.appendChild(editButton);
+    
 
     postCard.appendChild(cardHeader);
     postCard.appendChild(postCardBody);

@@ -21,7 +21,7 @@ async function editPost(url, postData) {
 
 export function createEditButton(post) {
     const editButton = document.createElement("button");
-    editButton.classList.add("btn", "btn-outline-primary");
+    editButton.classList.add("btn", "btn-warning");
 
     // Create an <i> element for the edit icon
     const editIcon = document.createElement("i");

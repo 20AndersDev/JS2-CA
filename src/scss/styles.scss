@@ -94,3 +94,43 @@ $modal-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         }
     }
 }
+
+
+#deletePostModal {
+  .modal-dialog {
+    max-width: 600px;
+  }
+
+  .modal-content {
+    border-radius: 10px;
+
+    .modal-header {
+      background-color: #007bff;
+      color: white;
+
+      .modal-title {
+        font-size: 24px;
+      }
+    }
+
+    .modal-body {
+      padding: 20px;
+
+      .modal-text {
+        margin-bottom: 20px;
+      }
+    }
+
+    .modal-footer {
+      background-color: #f8f9fa;
+
+      .btn-secondary {
+        background-color: #6c757d;
+      }
+
+      .btn-danger {
+        background-color: #dc3545;
+      }
+    }
+  }
+}
