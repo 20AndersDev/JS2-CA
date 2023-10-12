@@ -29,6 +29,9 @@ export function createPosts(post) {
 
     const postCardBody = document.createElement("div");
     postCardBody.classList.add("postCard");
+    postCardBody.addEventListener("click", () => {
+    window.location.href = `/singlepost/index.html?id=${post.id}`;
+    });
 
     const postTitle = document.createElement("h5");
     postTitle.classList.add("post-Title");

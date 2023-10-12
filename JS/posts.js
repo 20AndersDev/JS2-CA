@@ -25,10 +25,8 @@ async function getPosts() {
         console.log(json);
         postContainer.innerHTML = "";
 
-        // Filter and sort the posts
         let filteredPosts = json;
 
-        // Sort the filtered posts based on reactions (likes) if filterByLikes is true
         if (filterByLikes) {
             filteredPosts = filteredPosts.filter(post => post._count.reactions > 0);
             filteredPosts.sort((a, b) => b._count.reactions - a._count.reactions);

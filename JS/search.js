@@ -16,8 +16,14 @@ searchInput.addEventListener("input", (e) => {
         const postTitle = post.title.toLowerCase();
         return authorName.includes(searchText) || postTitle.includes(searchText);
     });
-    displayFilteredPosts(filteredPosts);
+
+    if (filteredPosts.length === 0) {
+        postContainer.innerHTML = "No records found.";
+    } else {
+        displayFilteredPosts(filteredPosts);
+    }
 });
+
 
 function displayFilteredPosts(filteredPosts) {
     postContainer.innerHTML = "";
@@ -41,7 +47,8 @@ async function getPostsData() {
         posts = await response.json();
         displayFilteredPosts(posts);
     } catch (error) {
-        console.log(error);
+        console.log("No match found");
+        
     }
 }
 

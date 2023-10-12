@@ -47,7 +47,6 @@ function formSuccess() {
     const successMessage = document.getElementById("post-success");
     successMessage.style.display = "block";
 
-    // Clear the form fields
     document.getElementById("post-form-title").value = "";
     document.getElementById("post-form-body").value = "";
     document.getElementById("post-form-media").value = "";

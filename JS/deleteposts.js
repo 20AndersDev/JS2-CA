@@ -22,14 +22,11 @@ export function createDeleteButton(post) {
     const deleteButton = document.createElement("button");
     deleteButton.classList.add("btn", "btn-danger");
 
-    // Create an <i> element for the delete icon
     const deleteIcon = document.createElement("i");
     deleteIcon.classList.add("fas", "fa-trash-can");
 
-    // Append the delete icon to the button
     deleteButton.appendChild(deleteIcon);
 
-    // Add an event listener to open the delete confirmation modal and set the query URL
     deleteButton.addEventListener("click", () => {
         const deletePostUrl = `${API_URL_base}/social/posts/${post.id}`;
         modal.style.display = "block";

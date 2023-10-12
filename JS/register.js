@@ -13,7 +13,6 @@ async function registerNewUser(url, userData) {
     const response = await fetch(url, registerPostData);
 
     if (response.ok) {
-      // Registration was successful
       window.location.href = "../index.html?registration=success";
     } else if (response.status === 400){
       const errorMessageElement = document.getElementById("errorMessage");
@@ -21,7 +20,7 @@ async function registerNewUser(url, userData) {
       errorMessageElement.style.display = "block";
     }
   } catch (error) {
-    
+    return error;
   }
 
 }
