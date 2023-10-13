@@ -26,6 +26,7 @@ export function createPosts(post) {
 
     const postCardBody = document.createElement("div");
     postCardBody.classList.add("postCard");
+    postCard.style.maxWidth = "800px"; 
     postCardBody.addEventListener("click", () => {
         window.location.href = `/singlepost/index.html?id=${post.id}`;
     });
@@ -40,9 +41,7 @@ export function createPosts(post) {
     postBody.textContent = post.body;
 
     const postImage = document.createElement("img");
-    postImage.classList.add("post-Image", "img-fluid","justify-content-center","d-flex");
-    postImage.style.maxHeight = "500px";
-    postImage.style.maxWidth = "800px";  
+    postImage.classList.add("post-Image", "img-fluid",); 
     postCardBody.style.textAlign = "center";
     postImage.style.margin = "0 auto"; 
     postImage.src = post.media;
