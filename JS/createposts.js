@@ -3,7 +3,7 @@ import { createDeleteButton } from "./deleteposts.js";
 
 export function createPosts(post) {
     const postCard = document.createElement("div");
-    postCard.classList.add("card", "mb-4", "d-flex", "justify-content-center");
+    postCard.classList.add("card", "mb-4", "d-flex", "justify-content-center", "max-width-form");
 
     const cardHeader = document.createElement("div");
     cardHeader.classList.add("card-header", "d-flex", "justify-content-between");
@@ -17,10 +17,7 @@ export function createPosts(post) {
     dateCreated.textContent = new Date(post.created).toLocaleString();
 
     const editButton = createEditButton(post);
-    
-
     const deleteButton = createDeleteButton(post);
-    
 
     cardHeader.appendChild(authorName);
     cardHeader.appendChild(editButton);
@@ -30,19 +27,24 @@ export function createPosts(post) {
     const postCardBody = document.createElement("div");
     postCardBody.classList.add("postCard");
     postCardBody.addEventListener("click", () => {
-    window.location.href = `/singlepost/index.html?id=${post.id}`;
+        window.location.href = `/singlepost/index.html?id=${post.id}`;
     });
 
-    const postTitle = document.createElement("h5");
-    postTitle.classList.add("post-Title");
+    const postTitle = document.createElement("h4");
+    postTitle.classList.add("post-Title","p-5");
+    postTitle.style.fontWeight = "bold";
     postTitle.textContent = post.title;
 
     const postBody = document.createElement("p");
-    postBody.classList.add("post-Body");
+    postBody.classList.add("post-Body","p-5");
     postBody.textContent = post.body;
 
     const postImage = document.createElement("img");
-    postImage.classList.add("post-Image", "img-fluid");
+    postImage.classList.add("post-Image", "img-fluid","justify-content-center","d-flex");
+    postImage.style.maxHeight = "500px";
+    postImage.style.maxWidth = "800px";  
+    postCardBody.style.textAlign = "center";
+    postImage.style.margin = "0 auto"; 
     postImage.src = post.media;
 
     postCardBody.appendChild(postTitle);
@@ -50,29 +52,41 @@ export function createPosts(post) {
     postCardBody.appendChild(postImage);
 
     const cardFooter = document.createElement("div");
-    cardFooter.classList.add("card-footer", "d-flex", "justify-content-evenly");
+    cardFooter.classList.add("card-footer", "d-flex", "justify-content-evenly","mt-3");
+
+    // Create a div for reactions
+    const reactionsDiv = document.createElement("div");
+    reactionsDiv.classList.add("reactions-div", "justify-content-center");
 
     const reactionsCount = document.createElement("h5");
-    reactionsCount.classList = "reactions-count";
+    reactionsCount.classList = "reactions-count,d-flex, p-2";
     reactionsCount.textContent = post._count.reactions;
-
-    const commentCount = document.createElement("h5");
-    commentCount.classList = "comment-count";
-    commentCount.textContent = post._count.comments;
 
     const likeIcon = document.createElement("i");
     likeIcon.classList.add("far", "fa-heart", "fa-2x");
+    
+    // Create a div for comments
+    const commentsDiv = document.createElement("div");
+    commentsDiv.classList.add("comments-div");
+
+    const commentCount = document.createElement("h5");
+    commentCount.classList = "comment-count, d-flex, p-2";
+    commentCount.textContent = post._count.comments;
 
     const commentIcon = document.createElement("i");
     commentIcon.classList.add("far", "fa-comment", "fa-2x");
 
-    cardFooter.appendChild(reactionsCount);
-    cardFooter.appendChild(likeIcon);
-    cardFooter.appendChild(commentCount);
-    cardFooter.appendChild(commentIcon);
-
-    // Create an edit button for all posts
+    reactionsDiv.appendChild(likeIcon);
+    reactionsDiv.appendChild(reactionsCount);
     
+
+
+    commentsDiv.appendChild(commentIcon);
+    commentsDiv.appendChild(commentCount);
+    
+
+    cardFooter.appendChild(reactionsDiv);
+    cardFooter.appendChild(commentsDiv);
 
     postCard.appendChild(cardHeader);
     postCard.appendChild(postCardBody);
@@ -80,9 +94,3 @@ export function createPosts(post) {
 
     return postCard;
 }
-
-
-
-
-
-

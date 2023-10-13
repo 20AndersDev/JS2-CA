@@ -14,67 +14,66 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-primary p-1">
-            <a class="navbar-brand text-white brand" href="/Feed/index.html"><img src="/Assets/images/logo_navbar-removebg-preview.png" ></a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <a class="navbar-brand text-white brand" href="/Feed/index.html">
+                <img src="/Assets/images/logo_navbar-removebg-preview.png">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
             </button>
-            
-          
-            <div class="collapse navbar-collapse m-3" id="navbarSupportedContent">
-                <form class="form-inline my-2 my-lg-0 ml-lg-3 d-flex">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search (username or title)" aria-label="Search" id="search-input">
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-lg-auto mt-2 mt-lg-0 gap-2 p-3">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/profile/index.html">Profile <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Feed/index.html">Feed</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link sign_out" href="../index.html">Sign out</a>
+                    </li>
+                </ul>
+    
+                <form class="form-inline my-2 my-lg-0 ml-lg-auto d-flex justify-content-center align-items-center">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search (username or title)" aria-label="Search" id="search-input" style="width: 300px;">
                 </form>
-
-
-                <div class=" col-10 d-flex flex-column flex-lg-row align-items-lg-center justify-content-center gap-lg-5">
-                    <ul class="navbar-nav mr-lg-auto mt-2 mt-lg-0 gap-2">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/profile/index.html">Profile <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Feed/index.html">Feed</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link sign_out" href="../index.html">Sign out</a>
-                        </li>
-                    </ul>
-                
-                    
-                </div>
             </div>
-            
-            
         </nav>
     </header>
+    
+    
     <main>
-        <div class="container mt-5">
+        <div class="container mt-5 max-width-form">
             <div class="row justify-content-center">
-                <div class="col-lg-6 ">
+                <div class="col mx-auto">
                     <!-- Create Post Section -->
                     <div class="card mb-4 d-flex justify-content-center">
                         <div class="card-header">
                             <h5>What's on your mind today, ?</h5>
                         </div>
-                        <form id="newPostForm">
-                            <div class="card-body">
-                                <textarea class="form-control" id="post-form-title" rows="1" placeholder="Title" required></textarea>
-                                <textarea class="form-control" id="post-form-body" rows="3" placeholder="Write your post..."></textarea>
-                                <textarea class="form-control" id="post-form-media" rows="1" placeholder="Media (add URL)"></textarea>
-                            </div>
-                            <div class="card-footer">
-                                <button class="btn btn-success" id="submit-post">Create Post</button>
-                            </div>
-                        </form>
+                        <div > 
+                            <form id="newPostForm">
+                                <div class="card-body">
+                                    <textarea class="form-control p-3" id="post-form-title" rows="1" placeholder="Title" required></textarea>
+                                    <textarea class="form-control mb-3 p-3" id="post-form-body" rows="3" placeholder="Write your post..."></textarea>
+                                    <textarea class="form-control p-3" id="post-form-media" rows="1" placeholder="Media (add URL)"></textarea>
+                                </div>
+                                <div class="card-footer d-flex justify-content-end">
+                                    <button class="btn btn-success p-3 m-3" id="submit-post">Create Post</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        
         <div class="d-flex justify-content-center mt-5">
             <h2 id="post-success" class="text-success" style="display: none; "> Successfully created post</h2>
         </div>
         
-        <div class="dropdown">
+        <div class="dropdown d-flex">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Filter
             </a>
@@ -127,20 +126,15 @@
         </div>
         
 
-        
-
-        
-        
-
-        
-
         <div class="container mt-5">
             <div class="row justify-content-center">
-                
-                <div id="postContainer">
-
+                <div id="postContainer" class="text-center">
+                    <!-- Your posts go here -->
                 </div>
+            </div>
         </div>
+        
+        
 
 
 

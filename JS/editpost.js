@@ -30,8 +30,7 @@ export function createEditButton(post) {
 
     editButton.addEventListener("click", () => {
 
-       
-
+    
         const modal = document.getElementById("edit-post-modal");
         modal.style.display = "block";
 
