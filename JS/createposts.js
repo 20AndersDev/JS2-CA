@@ -27,6 +27,7 @@ export function createPosts(post) {
     const postCardBody = document.createElement("div");
     postCardBody.classList.add("postCard");
     postCard.style.maxWidth = "800px"; 
+    postCardBody.style.cursor = "pointer";
     postCardBody.addEventListener("click", () => {
         window.location.href = `/singlepost/index.html?id=${post.id}`;
     });

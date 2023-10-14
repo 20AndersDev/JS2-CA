@@ -8,13 +8,21 @@ loginForm.addEventListener("submit", async (login) => {
   const email = document.getElementById("loginEmail").value;
   const password = document.getElementById("loginPassword").value;
 
+  
+
   const userData = {
     email: email,
     password: password,
   };
 
-  await loginUser(loginUrl, userData);
+  if (!email || !password) {
+    // Check if email or password is missing and display an error message.
+    const errorContainer = document.getElementById("errorContainer");
+    errorContainer.innerHTML = "Please fill out all fields.";
+    return;
+  }
 
+  await loginUser(loginUrl, userData);
 });
 
 async function loginUser(url, userData) {
@@ -31,15 +39,19 @@ async function loginUser(url, userData) {
     };
     const response = await fetch(url, loginPostData);
     const json = await response.json();
-    const accessToken = await json.accessToken;
-    const name = await json.name;
-    localStorage.setItem("accessToken", accessToken);
-    localStorage.setItem("name", name);
+
     if (response.status === 401) {
-      console.log("Invalid email or password");
-    } else if (accessToken) {
-      window.location.href = "/profile/index.html"
+      // Handle invalid email or password error
+      const errorContainer = document.getElementById("errorContainer");
+      errorContainer.innerHTML = "Invalid email or password. Make sure you typed an valid norrof email and correct password.";
+    } else if (response.status === 200) {
+      const accessToken = await json.accessToken;
+      const name = await json.name;
+      localStorage.setItem("accessToken", accessToken);
+      localStorage.setItem("name", name);
+      window.location.href = "/profile/index.html";
     } else {
+      // Handle other errors
       console.log("Something went wrong");
     }
   } catch (error) {
@@ -57,3 +69,4 @@ if (registrationSuccess === "success") {
     successMessage.style.display = "block";
   }
 }
+
