@@ -43,7 +43,7 @@ async function loginUser(url, userData) {
     if (response.status === 401) {
       // Handle invalid email or password error
       const errorContainer = document.getElementById("errorContainer");
-      errorContainer.innerHTML = "Invalid email or password. Make sure you typed an valid norrof email and correct password.";
+      errorContainer.innerHTML = "Invalid email or password. Make sure you typed an valid Noroff email and correct password.";
     } else if (response.status === 200) {
       const accessToken = await json.accessToken;
       const name = await json.name;

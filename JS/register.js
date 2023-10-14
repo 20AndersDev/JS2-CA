@@ -11,14 +11,16 @@ async function registerNewUser(url, userData) {
       body: JSON.stringify(userData),
     };
     const response = await fetch(url, registerPostData);
+    console.log(response)
 
     if (response.ok) {
       window.location.href = "../index.html?registration=success";
     } else if (response.status === 400){
       const errorMessageElement = document.getElementById("errorMessage");
-      errorMessageElement.textContent = "User already exists, please login.";
+      errorMessageElement.textContent = "Registration failed, please try again.";
       errorMessageElement.style.display = "block";
     }
+
   } catch (error) {
     return error;
   }
