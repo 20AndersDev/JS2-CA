@@ -3,6 +3,21 @@
 
 //nav bar styling
 
+/* Add this CSS to your stylesheet */
+.small-avatar {
+  max-width: 200px; /* Adjust the width as needed */
+  max-height: 200px; /* Adjust the height as needed */
+}
+
+
+.container-max-width {
+  max-width: 800px;
+}
+
+.max-width-form {
+  max-width: 800px;
+}
+
 .nav-item {
   a.nav-link {
     font-weight: bold;
@@ -52,3 +67,47 @@
     color: #fff; 
   }
 }
+
+
+/* Define Sass variables */
+$modal-background-color: rgba(0, 0, 0, 0.5);
+$modal-content-background-color: #fff;
+$modal-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+/* Style the modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $modal-background-color;
+    z-index: 1;
+    overflow: auto;
+
+    /* Style the modal content */
+    &-content {
+        background-color: $modal-content-background-color;
+        margin: 20% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        box-shadow: $modal-box-shadow;
+    }
+
+    /* Style the close button */
+    & .close-button {
+        color: #888;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+            color: #000;
+        }
+    }
+}
+
+
