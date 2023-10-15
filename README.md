@@ -1,6 +1,6 @@
-# CSS-Frameworks Course Assignment
+# Javasscript 2 - Course Assignment
 
-This is a School web project that utilizes Bootstrap and Sass for styling. It also uses Live Server for a development server. Below are instructions on how to set up and run the project.
+This is a School web project that utilizes Bootstrap, Sass and javascript. It also uses Live Server for a development server. Below are instructions on how to set up and run the project.
 
 ## Prerequisites
 
