@@ -1,4 +1,4 @@
-import { API_URL_base } from "./apicalls.js";
+import { API_URL_base } from "./apicalls.mjs";
 
 const singlePostUrl = API_URL_base + "/social/posts/";
 
@@ -6,10 +6,7 @@ async function getSinglePost() {
     const urlParams = new URLSearchParams(window.location.search);
     const postId = urlParams.get("id");
 
-    if (!postId) {
-        console.log("No ID.");
-        return;
-    }
+
 
 
     const url = `${singlePostUrl}${postId}?_author=true&_comments=true`;
@@ -156,5 +153,18 @@ function displaySinglePost(post) {
     container.appendChild(postCard);
 }
 
+
+const profileLink = document.getElementById("profile-link");
+
+// Add an event listener to handle the click
+profileLink.addEventListener("click", () => {
+    const profileName = localStorage.getItem("name");
+    if (profileName) {
+        // Set the href attribute with the author's name in the query
+        profileLink.href = `/profile/index.html?author=${encodeURIComponent(profileName)}`;
+    } else {
+        return("No profile name found");
+    }
+});
 // Call the function to fetch and display the single post
 getSinglePost();

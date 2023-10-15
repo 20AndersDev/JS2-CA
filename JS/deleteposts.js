@@ -1,4 +1,4 @@
-import { API_URL_base } from "./apicalls.js";
+import { API_URL_base } from "./apicalls.mjs";
 
 async function deletePost(url) {
     try {
@@ -12,11 +12,15 @@ async function deletePost(url) {
 
         return response; 
     } catch (error) {
-        console.log(error);
+        return(error);
     }
 }
 
 const modal = document.getElementById("deletePostModal");
+
+/**
+ * Creates a delete button for a posts on the feed page. Only the creator of the post can see this * button. When clicked opens an modal that asks the user to confirm the deletion of the post.
+ */
 
 export function createDeleteButton(post) {
     const deleteButton = document.createElement("button");

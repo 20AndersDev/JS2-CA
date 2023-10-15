@@ -26,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-lg-auto mt-2 mt-lg-0 gap-2 p-3">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/profile/index.html">Profile</a>
+                        <a id="profile-link" class="nav-link" href="/profile/index.html">Profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/Feed/index.html">Feed</a>
@@ -50,21 +50,22 @@
                 <div class="col mx-auto ">
                     <!-- Create Post Section -->
                     <div class="card mb-4 d-flex justify-content-center ">
-                        <div class="card-header">
-                            <h5>What's on your mind today?</h5>
-                        </div>
-                        <div > 
+                        <div class="card mb-4 d-flex justify-content-center">
+                            <div class="card-header">
+                                <h5>What's on your mind today?</h5>
+                            </div>
                             <form id="newPostForm">
                                 <div class="card-body">
-                                    <textarea class="form-control p-3" id="post-form-title" rows="1" placeholder="Title" required></textarea>
-                                    <textarea class="form-control mb-3 p-3" id="post-form-body" rows="3" placeholder="Write your post..."></textarea>
-                                    <textarea class="form-control p-3" id="post-form-media" rows="1" placeholder="Media (add URL)"></textarea>
+                                    <textarea class="form-control p-2" id="post-form-title" rows="1" placeholder="Title" required></textarea>
+                                    <textarea class="form-control mb-3 p-2 max-width" id="post-form-body" rows="3" placeholder="Write your post..."></textarea>
+                                    <textarea class="form-control p-3 max-width" id="post-form-media" rows="1" placeholder="Media (add URL)"></textarea>
                                 </div>
                                 <div class="card-footer d-flex justify-content-end">
-                                    <button class="btn btn-success p-3 m-3" id="submit-post">Create Post</button>
+                                    <button class="btn btn-success p-2 m-3" id="submit-post">Create Post</button>
                                 </div>
                             </form>
                         </div>
+                        
                     </div>
                 </div>
             </div>

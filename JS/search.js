@@ -18,7 +18,7 @@ searchInput.addEventListener("input", (e) => {
     });
 
     if (filteredPosts.length === 0) {
-        postContainer.innerHTML = "No records found.";
+        postContainer.innerHTML = "No posts found.";
     } else {
         displayFilteredPosts(filteredPosts);
     }
@@ -47,7 +47,7 @@ async function getPostsData() {
         posts = await response.json();
         displayFilteredPosts(posts);
     } catch (error) {
-        console.log("No match found");
+        return error;
         
     }
 }

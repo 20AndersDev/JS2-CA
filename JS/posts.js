@@ -1,6 +1,4 @@
-const API_URL_base = "https://api.noroff.dev/api/v1";
-const postUrl =  API_URL_base + "/social/posts?_author=true";
-
+import { postUrl } from "./apicalls.mjs";
 import { createPosts } from "./createposts.js";
 
 
@@ -22,7 +20,6 @@ async function getPosts() {
 
         const response = await fetch(postUrl,getPostsData);
         const json = await response.json();
-        console.log(json);
         postContainer.innerHTML = "";
 
         let filteredPosts = json;
@@ -45,7 +42,7 @@ async function getPosts() {
 
 
     } catch (error) {
-        console.log(error);
+        return(error);
     }
 }
 
@@ -60,6 +57,23 @@ document.getElementById("filter-likes").addEventListener("click", () => {
 document.getElementById("filter-comments").addEventListener("click", () => {
     window.location.href = "/Feed/index.html?_comments=true"
 });
+
+
+// Get the profile link element
+const profileLink = document.getElementById("profile-link");
+
+// Add an event listener to handle the click
+profileLink.addEventListener("click", () => {
+    const profileName = localStorage.getItem("name");
+    if (profileName) {
+        // Set the href attribute with the author's name in the query
+        profileLink.href = `/profile/index.html?author=${encodeURIComponent(profileName)}`;
+    } else {
+        return("No profile name found");
+    }
+});
+
+
 
 getPosts();
 

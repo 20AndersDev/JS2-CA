@@ -1,4 +1,4 @@
-import { newPostUrl } from "./apicalls.js";
+import { newPostUrl } from "./apicalls.mjs";
 
 const newPostForm = document.getElementById("newPostForm");
 
@@ -14,10 +14,9 @@ async function createNewPost(url, postData) {
         };
         const response = await fetch(url, newPostData);
         const json = await response.json();
-        console.log(json);
         return json; 
     } catch (error) {
-        console.log(error);
+        return(error);
     }
 }
 

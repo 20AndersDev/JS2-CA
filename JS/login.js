@@ -1,5 +1,6 @@
-const API_URL_base = "https://api.noroff.dev/api/v1";
-const loginUrl = API_URL_base + "/social/auth/login";
+import { loginUrl } from "./apicalls.mjs";
+
+
 const loginForm = document.getElementById("loginForm");
 
 loginForm.addEventListener("submit", async (login) => {
@@ -48,13 +49,13 @@ async function loginUser(url, userData) {
       const name = await json.name;
       localStorage.setItem("accessToken", accessToken);
       localStorage.setItem("name", name);
-      window.location.href = "/profile/index.html";
+      window.location.href = "/Feed/index.html";
     } else {
       // Handle other errors
-      console.log("Something went wrong");
+      return("Something went wrong");
     }
   } catch (error) {
-    console.log(error);
+    return(error);
   }
 }
 

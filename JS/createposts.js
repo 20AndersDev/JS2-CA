@@ -1,6 +1,11 @@
 import { createEditButton } from "./editpost.js";
 import { createDeleteButton } from "./deleteposts.js";
 
+
+/**
+ * Creates a post card element on the page. The post creator name can be clicked to view the users * profile. The post body can be clicked to view the post details such as comments.
+ */
+
 export function createPosts(post) {
     const postCard = document.createElement("div");
     postCard.classList.add("card", "mb-4", "d-flex", "justify-content-center", "max-width-form");
@@ -8,7 +13,6 @@ export function createPosts(post) {
     const cardHeader = document.createElement("div");
     cardHeader.classList.add("card-header", "d-flex", "justify-content-between");
 
-    // Create an anchor element for the author's name
     const authorLink = document.createElement("a");
     authorLink.href = `/profile/index.html?author=${encodeURIComponent(post.author.name)}`;
     authorLink.style.textDecoration = "none";
@@ -57,9 +61,8 @@ export function createPosts(post) {
 
     const cardFooter = document.createElement("div");
     cardFooter.classList.add("card-footer", "d-flex", "justify-content-evenly", "mt-3");
-
-    // Create a div for reactions
     const reactionsDiv = document.createElement("div");
+
     reactionsDiv.classList.add("reactions-div", "justify-content-center");
 
     const reactionsCount = document.createElement("h5");
@@ -69,7 +72,7 @@ export function createPosts(post) {
     const likeIcon = document.createElement("i");
     likeIcon.classList.add("far", "fa-heart", "fa-2x");
 
-    // Create a div for comments
+
     const commentsDiv = document.createElement("div");
     commentsDiv.classList.add("comments-div");
 

@@ -1,5 +1,5 @@
-const API_URL_base = "https://api.noroff.dev/api/v1";
-const registerNewUserUrl = `${API_URL_base}/social/auth/register`;
+import { registerNewUserUrl } from "/JS/apicalls.mjs";
+
 
 async function registerNewUser(url, userData) {
   try {
@@ -11,7 +11,6 @@ async function registerNewUser(url, userData) {
       body: JSON.stringify(userData),
     };
     const response = await fetch(url, registerPostData);
-    console.log(response)
 
     if (response.ok) {
       window.location.href = "../index.html?registration=success";
