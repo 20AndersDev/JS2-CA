@@ -9,6 +9,7 @@
     <script src="/JS/posts.js" type="module" defer></script>
     <script src="/JS/newpost.js" type="module" defer></script>
     <script src="/JS/editpost.js" type="module" defer></script>
+    <script src="/JS/signout.js" type="module" defer></script>
     
     <title>ChatApp - Feed</title>
 </head>
@@ -25,13 +26,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-lg-auto mt-2 mt-lg-0 gap-2 p-3">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/profile/index.html">Profile <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/profile/index.html">Profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/Feed/index.html">Feed</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link sign_out" href="../index.html">Sign out</a>
+                        <a id="signout" class="nav-link sign_out">Sign out</a>
                     </li>
                 </ul>
     
@@ -44,13 +45,13 @@
     
     
     <main>
-        <div class="container mt-5 max-width-form">
+        <div class="container mt-5 container-max-width ">
             <div class="row justify-content-center">
-                <div class="col mx-auto">
+                <div class="col mx-auto ">
                     <!-- Create Post Section -->
-                    <div class="card mb-4 d-flex justify-content-center">
+                    <div class="card mb-4 d-flex justify-content-center ">
                         <div class="card-header">
-                            <h5>What's on your mind today, ?</h5>
+                            <h5>What's on your mind today?</h5>
                         </div>
                         <div > 
                             <form id="newPostForm">
@@ -73,7 +74,7 @@
             <h2 id="post-success" class="text-success" style="display: none; "> Successfully created post</h2>
         </div>
         
-        <div class="dropdown d-flex">
+        <div class="dropdown d-flex justify-content-center">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Filter
             </a>
@@ -83,14 +84,14 @@
               <a class="dropdown-item" id="filter-likes" href="#">Likes</a>
               <a class="dropdown-item" id="filter-comments" href="#">Comments</a>
             </div>
-          </div>
+        </div>
 
         
           <div id="edit-post-modal" class="modal">
-            <div class="modal-content">
+            <div class="modal-content  max-width-form">
                 <span class="close-button">&times;</span>
                 <h2>Edit Post</h2>
-                <form id="edit-post-form">
+                <form id="edit-post-form" class="d-flex flex-column gap-3 ">
                     <label for="edit-post-title">Title:</label>
                     <input type="text" id="edit-post-title" required>
         
@@ -104,15 +105,13 @@
                 </form>
             </div>
         </div>
+        
 
         <div class="modal" id="deletePostModal">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">Confirm Deletion</h5>
-                        <button type="button" class="close" data-dismiss="modal">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
                     </div>
                     <div class="modal-body">
                         Are you sure you want to delete this post?
@@ -126,9 +125,9 @@
         </div>
     
 
-        <div class="container mt-5 custom-container ">
+        <div class="container mt-5 ">
             <div class="row justify-content-center">
-                <div id="postContainer" class="text-center">
+                <div id="postContainer" class="text-center container-max-width">
         
                 </div>
             </div>

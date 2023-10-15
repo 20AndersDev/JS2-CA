@@ -16,7 +16,6 @@ loginForm.addEventListener("submit", async (login) => {
   };
 
   if (!email || !password) {
-    // Check if email or password is missing and display an error message.
     const errorContainer = document.getElementById("errorContainer");
     errorContainer.innerHTML = "Please fill out all fields.";
     return;
