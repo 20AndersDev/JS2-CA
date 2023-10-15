@@ -45,30 +45,28 @@
     
     
     <main>
-        <div class="container mt-5 container-max-width ">
+        <div class="container mt-5 container-max-width">
             <div class="row justify-content-center">
-                <div class="col mx-auto ">
-                    <div class="card mb-4 d-flex justify-content-center ">
-                        <div class="card mb-4 d-flex justify-content-center">
-                            <div class="card-header">
-                                <h5>What's on your mind today?</h5>
-                            </div>
-                            <form id="newPostForm">
-                                <div class="card-body">
-                                    <input class="form-control p-2" id="post-form-title" rows="1" placeholder="Title" required></input>
-                                    <input class="form-control mb-3 p-2 max-width" id="post-form-body" rows="3" placeholder="Write your post..."></input>
-                                    <input class="form-control p-3 max-width" id="post-form-media" rows="1" placeholder="Media (add URL)"></input>
-                                </div>
-                                <div class="card-footer d-flex justify-content-end">
-                                    <button class="btn btn-success p-2 m-3" id="submit-post">Create Post</button>
-                                </div>
-                            </form>
+                <div class="col mx-auto">
+                    <div class="card mb-4 d-flex justify-content-center">
+                        <div class="card-header">
+                            <h5>What's on your mind today?</h5>
                         </div>
-                        
+                        <form id="newPostForm">
+                            <div class="card-body">
+                                <input class="form-control p-2" id="post-form-title" placeholder="Title" required>
+                                <textarea class="form-control mb-3 p-2 max-width" id="post-form-body" placeholder="Write your post..." rows="3"></textarea>
+                                <input class="form-control p-2 max-width" id="post-form-media" placeholder="Media (add URL)">
+                            </div>
+                            <div class="card-footer d-flex justify-content-end">
+                                <button class="btn btn-success p-2 m-3" id="submit-post">Create Post</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+        
         
         <div class="d-flex justify-content-center mt-5">
             <h2 id="post-success" class="text-success" style="display: none; "> Successfully created post</h2>
